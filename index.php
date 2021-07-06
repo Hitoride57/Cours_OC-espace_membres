@@ -8,13 +8,18 @@ include('includes/db_call.php');
 
 ?>
 
-<form action='inside.php' method='post' class='login'>
+<form action="inside.php" method="post" class="login">
     <h2>T'es qui touè ?</h2>
-        <input type='text' name='pseudo' placeholder='Ton blaze' required />
+        Pseudo : <input type="text" name="pseudo" placeholder="Ton blaze" required>
         <br />
-        <input type='password' name='password' placeholder='Ton code' required />
+        Mot de passe : <input type="password" name="password" placeholder="Ton code" required>
         <br />
-        <input type='submit' value='Vas-y entre !' />
+        <input type="submit" value="Vas-y entre !">
+        <br />
+        <input type="checkbox" name="autologin" id="autologin">
+        <label for="autologin">Et m'oublie pas !</label>
+        <br />
+        <a href="inscription.php">Pas inscrit ? Allez, R'joins nous !</a>
 </form>
 
 </html>
