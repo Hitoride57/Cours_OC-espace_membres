@@ -1,0 +1,17 @@
+h1, h2, h3, .login
+{
+    text-align:center;
+}
+h3
+{
+    background-color:black;
+    color:white;
+    font-size:0.9em;
+    margin-bottom:0px;
+}
+
+a
+{
+    text-decoration: none;
+    color: blue;
+}
