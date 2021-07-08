@@ -6,9 +6,11 @@ include('includes/header.php');
 include('includes/var_set.php');
 include('includes/db_call.php');
 
+include('includes/add_user.php');
+
 ?>
 
-<form action="index.php" method="post" class="login">
+<form action="inscription.php" method="post" class="login">
     <h2>Il est de noôÔôotre !!!</h2>
     <p>Vas-y, donne tes trucs et clique en bas !</p>
         Pseudo : <input type="text" name="pseudo" placeholder="Ton blaze" required>
