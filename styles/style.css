@@ -3,6 +3,11 @@ h1, h2, h3, .login
     text-align: center;
 }
 
+h3
+{
+    color: red;
+}
+
 a
 {
     text-decoration: none;

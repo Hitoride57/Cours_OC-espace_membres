@@ -20,9 +20,12 @@ if (isset($_POST['pseudo'])) {
                 'pass' => $pass_hash,
                 'email' => $email));
 
+            $req->closeCursor();
+            
             // Rediriger vers la page de connexion si l'inscription s'est bien passée
             // Voir pour ajouter un message de confirmation pour dire que l'inscription est validée
             header('Location: index.php');
+            
             
         } else {
 
@@ -33,5 +36,6 @@ if (isset($_POST['pseudo'])) {
         echo '<div class="login">C\'est quoi de ton mèl là ! Ressais moi tout ça !</div>';
     }
 }
+
 
 ?>
