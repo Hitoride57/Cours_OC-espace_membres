@@ -1,14 +1,18 @@
 <?php
 
-include('includes/head.php');
-include('includes/header.php');
-
 include('includes/var_set.php');
 include('includes/db_call.php');
 
+include('includes/autologin.php');
+include('includes/connect.php');
+include('includes/kill_session.php');
+
+include('includes/head.php');
+include('includes/header.php');
+
 ?>
 
-<form action="inside.php" method="post" class="login">
+<form action="index.php" method="post" class="login">
     <h2>T'es qui touè ?</h2>
         Pseudo : <input type="text" name="pseudo" placeholder="Ton blaze" required>
         <br />
