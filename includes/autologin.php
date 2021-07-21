@@ -1,10 +1,10 @@
 <?php
 
-if ((isset($_COOKIE['id'])) AND (isset($_COOKIE['pseudo'])) AND (isset($_COOKIE['pass']))) {
+if ((isset($_SESSION['autologin']))) {
     
     $req = $db_espace_membres->prepare('SELECT id, pseudo, pass FROM membres WHERE id = :id');
     $req->execute(array(
-        'id' => $_COOKIE['id']));
+        'id' => $_SESSION['id']));
     
     $resultat = $req->fetch();
 
@@ -15,7 +15,7 @@ if ((isset($_COOKIE['id'])) AND (isset($_COOKIE['pseudo'])) AND (isset($_COOKIE[
     
     } else {
 
-        if (($_COOKIE['pseudo'] != $resultat['pseudo']) OR ($_COOKIE['pass'] != $resultat['pass'])) {
+        if (($_SESSION['pseudo'] != $resultat['pseudo']) OR ($_SESSION['pass'] != $resultat['pass'])) {
 
             echo '<h3 class="login">Vos identifiants ne sont plus valides, merci de vous réauthentifier.</h3>';
 
