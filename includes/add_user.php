@@ -29,11 +29,11 @@ if (isset($_POST['pseudo'])) {
             
         } else {
 
-            echo '<div class="login">Et ! Tu t\'est gouré dans tes trucs secrets là !</div>';
+            echo '<h3 class="login">Et ! Tu t\'est gouré dans tes trucs secrets là !</h3>';
 
         }
     } else {
-        echo '<div class="login">C\'est quoi de ton mèl là ! Ressais moi tout ça !</div>';
+        echo '<h3 class="login">C\'est quoi de ton mèl là ! Ressais moi tout ça !</h3>';
     }
 }
 
