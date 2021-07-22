@@ -23,7 +23,11 @@ if (isset($_POST['pseudo'])) {
         // A voir si cette méthode est réellement sécurisée
         if (isset($_POST['autologin'])) {
             
-            $_SESSION['autologin'];
+            setcookie('autologin', true, time() + 3600, null, null, false, true);
+            setcookie('id', $resultat['id'], time() + 3600, null, null, false, true);
+            setcookie('pseudo', $pseudo, time() + 3600, null, null, false, true);
+            setcookie('pass', $resultat['pass'], time() + 3600, null, null, false, true);
+
         }
         
         header('Location: inside.php');
@@ -33,6 +37,5 @@ if (isset($_POST['pseudo'])) {
     $req->closeCursor();
     
 }
-
 
 ?>

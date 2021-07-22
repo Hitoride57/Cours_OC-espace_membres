@@ -3,9 +3,9 @@
 include('includes/var_set.php');
 include('includes/db_call.php');
 
+include('includeS/kill_session.php');
 include('includes/autologin.php');
 include('includes/connect.php');
-include('includes/kill_session.php');
 
 include('includes/head.php');
 include('includes/header.php');
