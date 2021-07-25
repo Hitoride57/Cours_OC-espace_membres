@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_COOKIE['autologin'])) {
+if (isset($_COOKIE['autologin']) && $_COOKIE['autologin']) {
     
     $req = $db_espace_membres->prepare('SELECT id, pseudo, pass FROM membres WHERE id = :id');
     $req->execute(array(
